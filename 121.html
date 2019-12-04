@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="font_2fucih5od88/iconfont.css">
+    <link rel="stylesheet" href="css/121.css">
+
+    <title>网易云</title>
+</head>
+
+<body>
+
+    <!-- <span class="iconfont icon-pinglun"></span> -->
+    <div class="content"></div>
+    <div class="box">
+        <div class="top"></div>
+        <div class="songName">
+            <span class="iconfont icon-xiangzuo f06"></span>
+            <span class="iconfont icon-wangyiyunyinle f07"></span>
+            <div class="song">
+                <p></p>
+                <p class="f02"></p>
+            </div>
+            <span class="iconfont icon-zhankai zhankai"></span>
+
+        </div>
+        <div class="album">
+            <img src="" alt="">
+            <!-- 歌词 -->
+            <div class="words" style="display: none">
+                <div class="words-box">
+                    <!-- <p>还没有人上传歌词呐</p>
+                    <p>还没有人上传歌词呐</p>
+                    <p>还没有人上传歌词呐</p>
+                    <p>还没有人上传歌词呐</p>
+                    <p>还没有人上传歌词呐</p> -->
+                </div>
+            </div>  
+
+        </div>
+        <div class="function">
+            <div class="fun">
+                <span class="iconfont icon-like"></span>
+                <span class="iconfont icon-plus-download"></span>
+                <span class="iconfont icon-pinglun"></span>
+                <span class="iconfont icon-fenxiangcopy"></span>
+            </div>
+
+        </div>
+        <div class="section">
+            <audio id="audio" preload src=""></audio>
+            
+            <div class="f16 ctime" id="currentTime">00:00</div>
+
+            <!-- 进度条 -->
+            <div class="progress m-progress" id="progress" min="0" max="100">
+                <div class="progress-active m-progress-active"></div>
+                <div class="mask m-mask"></div>
+                <div class="layer m-event-progress"></div>
+            </div>
+            <div class="ff16 dtime" id="duration">00:00</div>
+        </div>
+        <div class="footer">
+            <div class="fo">
+                <span class="mode bg " data-min = "1" data-max = "3" data-value = "2"></span>
+                <span class="iconfont icon-yduishangyiqu f17"></span>
+                <span class="liPlay iconfont icon-play f17 " name="0"></span>
+                <span class="iconfont icon-yduixiayiqu f17"></span>
+                <span class="iconfont icon-list f35"></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="myself">
+        <div class="seletive">
+            <div class="iconfont icon-icon-"></div>
+            <div class="iconfont icon-search"></div>
+            <div class="lists">
+                <ul>
+                    <li>我的</li>
+                    <li>发现</li>
+                    <li>朋友</li>
+                    <li>视频</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="seletive-two">
+            <ul>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-Radio f81"></div>
+                    <div class="wodediantai">私人FM</div>
+                </li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li>
+                    <div class="iconfont icon-yinyue f60"></div>
+                    <div class="my">本地音乐</div> 
+                    <div>
+                        <span class="list-mysong">0</span>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="iconfont icon-zuijinbofang f60"></div>
+                    <div class="my">最近播放</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-plus-download f60" style="font-size: 0.6rem"></div>
+                    <div class="my">下载管理</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-wodediantai f60"></div>
+                    <div class="my">我的电台</div>
+                </li>
+                <li>
+                    <div class="iconfont icon-wodeshoucang f60"></div>
+                    <div class="my">我的收藏</div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="play">
+            <div class="play-fl">
+                <div class="play-img"><img src="" alt=""></div>
+                <div class="title">
+                    <div class="f50 nowrap"></div>
+                    <div class="f48 nowrap"></div>
+                </div>
+
+            </div>
+            <div class="play-fr">
+                <div class="iconfont icon-play f17 playing" data-play="0"></div>
+                <div class="iconfont icon-liebiao1 f65"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 歌曲列表 -->
+    <div class="local-list">
+        <div class="local-title">
+            <span class="iconfont icon-houtui f80"></span>
+            本地音乐
+        </div>
+        <div class="local-classify">
+            <ul>
+                <li>单曲</li>
+                <li>歌手</li>
+                <li>专辑</li>
+                <li>文件夹</li>
+            </ul>
+        </div>
+
+        <div class="local-song">
+            <ul class="current-list">
+                
+                <!-- <li class="active" >
+                    <div class="fl">
+                        <img src="img/微信图片_20190922121850.jpg" alt="">
+                    </div>
+                    <div class="lh fl ">
+                        <div class="local-songname">消愁</div>
+                        <div class="local-singer">毛不易</div>
+                    </div>
+                    <div class="local-play fr">
+                        <span class="iconfont icon-play f15" data-play="0"></span>
+                        <span class="iconfont icon-liebiao-dian f15"></span>
+                    </div>
+                </li> -->
+                <!-- <li>
+                    <div class="fl">
+                        <img src="img/xue.jpg.jpg">
+                    </div>
+                    <div class="lh fl ">
+                        <div class="local-songname">演员</div>
+                        <div class="local-singer">薛之谦</div>
+                    </div>
+                    <div class="local-play fr">
+                        <span class="iconfont icon-play f15" data-play="0"></span>
+                        <span class="iconfont icon-liebiao-dian f15"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="fl">
+                        <img src="img/zhang.jpg.jpg" alt="">
+                    </div>
+                    <div class="lh fl ">
+                        <div class="local-songname">虎口脱险（live）</div>
+                        <div class="local-singer">张磊</div>
+                    </div>
+                    <div class="local-play fr">
+                        <span class="iconfont icon-play f15" data-play="0"></span>
+                        <span class="iconfont icon-liebiao-dian f15"></span>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+        <div class="play">
+            <div class="play-fl">
+                <div class="play-img"><img src="" alt=""></div>
+                <div class="title">
+                    <div class="f50 nowrap"></div>
+                    <div class="f48 nowrap"></div>
+                </div>
+
+            </div>
+            <div class="play-fr">
+                <div class="liPlay iconfont icon-play f17" name="0"></div>
+                <div class="iconfont icon-liebiao1 f65"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/121.js"></script>
+</body>
+
+</html>
