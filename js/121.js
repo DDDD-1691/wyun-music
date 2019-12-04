@@ -11,29 +11,29 @@ $(function () {
     var seconds = Math.floor(songDatail.dt / 1000 % 60);
     seconds = seconds >= 10 ? seconds : '0' + seconds;
 
-    var da = localStorage.songs
-    if (da) {
-        da = JSON.parse(da);
-        songDatail = da.playlist.tracks.concat();
-        //歌曲id
+    // var da = localStorage.songs
+    // if (da) {
+    //     da = JSON.parse(da);
+    //     songDatail = da.playlist.tracks.concat();
+    //     //歌曲id
 
-        for (var i = 0; i < da.privileges.length; i++) {
-            songsId.push(da.privileges[i].id);
-        }
+    //     for (var i = 0; i < da.privileges.length; i++) {
+    //         songsId.push(da.privileges[i].id);
+    //     }
 
-        $('.list-mysong').text(songsId.length);
-    } else {
+    //     $('.list-mysong').text(songsId.length);
+    // } else {
         //获取歌单
         $.ajax({
             type: 'GET',
             url: 'http://www.arthurdon.top:3000/top/list?idx=1',
             success: function (data) {
                 console.log('data ==> ', data);
-
-                localStorage.setItem("songs", JSON.stringify(data))
+               
+                // localStorage.setItem("songs", JSON.stringify(data))
 
                 songDatail = data.playlist.tracks.concat();
-
+                
 
                 //歌曲id
                 for (var i = 0; i < data.privileges.length; i++) {
@@ -46,7 +46,7 @@ $(function () {
 
             }
         })
-    }
+    // }
 
 
 
